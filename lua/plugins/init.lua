@@ -36,5 +36,9 @@ return {
   {
     "folke/which-key.nvim",
     lazy = false, -- load at startup
+  },
+
+  {
+    "ionide/Ionide-vim",
   }
 }

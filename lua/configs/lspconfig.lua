@@ -44,7 +44,7 @@ local servers = {
   "jedi_language_server",   -- Python Jedi Language Server
   "pyright",                -- Pyright (optional: can replace Jedi)
   "pylsp",                  -- Python Language Server
-  "ruff_lsp",               -- Ruff LSP for Python
+  "ruff",               -- Ruff LSP for Python
 
   -- Rust
   "rust_analyzer",          -- Rust Analyzer
