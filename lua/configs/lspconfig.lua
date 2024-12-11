@@ -3,7 +3,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local lspconfig = require "lspconfig"
 local nvlsp = require "nvchad.configs.lspconfig"
-
+require'lspconfig'.fsautocomplete.setup{}
 -- List of LSP servers to configure
 local servers = {
   -- Ansible
@@ -22,6 +22,8 @@ local servers = {
   "dockerls",               -- Docker Language Server
   "docker_compose_language_service", -- Docker Compose Language Service
 
+  -- fsharp
+  "fsautocomplete",          -- FSharp Language Server
   -- Go
   "gopls",                  -- Go Language Server
 

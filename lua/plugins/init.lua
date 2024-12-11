@@ -23,15 +23,24 @@ return {
     end
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+
+  -- Treesitter configuration
+  {
+    "nvim-treesitter/nvim-treesitter",
+    lazy = false, -- load at startup
+    opts = {
+      "vim", "lua", "vimdoc", "html", "css", "fsharp"  -- Add "fsharp" to the list of parsers
+    },
+    config = function()
+      require'nvim-treesitter.configs'.setup {
+        ensure_installed = { "fsharp" },  -- Add fsharp to the list of parsers
+        highlight = {
+          enable = true,  -- Enable syntax highlighting for F#
+        },
+      }
+    end,
+  },
+
 
   {
     "folke/which-key.nvim",
